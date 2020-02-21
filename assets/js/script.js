@@ -45,15 +45,15 @@ function storyToggle(width){
     }
 }
 
-//Toggles h4 and h2 on jumbotron h1
+//Toggles h4 and display-4 on jumbotron h1
 function headerToggle(width){
     if(width <= 576){
-        h4.classList.remove("h2");
+        h4.classList.remove("display-4");
         h4.classList.add("h4");
     }
     else{
         h4.classList.remove("h4");
-        h4.classList.add("h2");
+        h4.classList.add("display-4");
     }
 }
 
