@@ -16,6 +16,10 @@ body{
     color: var(--orion);
 }
 
+.container{
+    overflow:hidden;   
+}
+
 .display-4{
     font-size: 1.7rem;
 }
