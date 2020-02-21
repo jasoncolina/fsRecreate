@@ -1,0 +1,150 @@
+/* Define colour variables */
+:root{
+    --greenery-: #88B04B;
+    --greenery-light: #9ABC66;
+    --orion: #404F5E;
+    --berry:#1C7ABA;
+    --berry-light:#3D8EC4;
+    --pigeon-extra-light:#EBF0F5;
+    --pigeon-light:#C8D0D8;
+}
+
+body{
+    margin: 0;
+    font-family: sofia-pro, sans-serif;
+    background-color: white;
+    color: var(--orion);
+}
+
+.display-4{
+    font-size: 1.7rem;
+}
+
+.notVisible{
+    display:none;
+}
+
+/* Navbar CSS */
+.navbar .btn{
+    transition: background-color 0.5s;
+    background-color: var(--greenery-);
+}
+
+.navbar .btn:hover{
+    background-color:var(--greenery-light);
+    color:white;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.fa-chevron-down{
+    font-size:12px;
+}
+
+
+/* Jumbotron CSS */
+.jumbotron:first-of-type{
+    background-color:var(--berry)
+}
+
+.jumbotron .btn{
+    transition: background-color 0.75s;
+}
+
+.jumbotron .btn i{
+    font-size:12px;
+}
+
+/* Video CSS */
+.dots{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%); /* Standard syntax */
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%); /* IE 9 */
+}
+
+hr{
+    width:40px;
+    border: 2px solid var(--greenery-);
+    border-radius: 5px;
+}
+
+/* Profiles CSS */
+.card{
+    border-color:var(--pigeon-light);
+}
+
+.card-img-top{
+    border-radius:50%;
+    width:100px;
+    height:100px;
+}
+
+.card-title{
+    color: var(--greenery-);
+}
+
+.card-subtitle{
+    color: var(--orion)
+}
+
+.textGreenery{
+    color: var(--greenery-);
+}
+
+
+/* dndGuide CSS */
+.greenBullets li{
+    list-style: none;
+}
+
+.greenBullets li::before {
+    content: "\2022";
+    color: var(--greenery-);
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em; 
+}
+
+/* Footer CSS */
+#story{
+    background-color: var(--orion);
+}
+
+#story img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    transform: translate(-45%, -50%); 
+    -webkit-transform: translate(-45%, -50%);
+    -ms-transform: translate(-45%, -50%);
+}
+
+
+
+/* Media Query changing h1 class to have a bigger font size after specificed breakpoint */
+@media (min-width: 992px) {
+    .h1{
+        font-size: 4.2rem;
+    }
+    #jumboParagraph{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .jumbotron::first-of-type p{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    #jumboParagraph{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
