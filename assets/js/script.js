@@ -1,5 +1,6 @@
 //Variable declarations
 var h1 = document.querySelector("#story h1");
+var h4 = document.querySelector(".jumbotron:first-of-type h1")
 var logoLarge = document.querySelector(".navbar-brand img:first-child");
 var logoSmall = document.querySelector(".navbar-brand img:last-child");
 var quotes = document.querySelector("#quotes");
@@ -9,10 +10,12 @@ var width = $(window).width();
 $( document ).ready(function() {
     logoToggle(width);
     storyToggle(width);
+    headerToggle(width);
     $(window).resize(function(){
         var newWidth = $(window).width();
         logoToggle(newWidth);
         storyToggle(newWidth);
+        headerToggle(newWidth);
     });
 });
 
@@ -41,4 +44,17 @@ function storyToggle(width){
         quotes.classList.add("notVisible")
     }
 }
+
+//Toggles h4 and h2 on jumbotron h1
+function headerToggle(width){
+    if(width <= 576){
+        h4.classList.remove("h2");
+        h4.classList.add("h4");
+    }
+    else{
+        h4.classList.remove("h4");
+        h4.classList.add("h2");
+    }
+}
+
 
