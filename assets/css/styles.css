@@ -39,6 +39,15 @@ body{
     color:white;
 }
 
+.nav-link{
+    color: var(--orion);
+    transition: color 0.25s;
+}
+
+.nav-link:hover{
+    color: var(--greenery-);
+}   
+
 .dropdown-toggle::after {
     display: none;
 }
